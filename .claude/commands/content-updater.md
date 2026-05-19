@@ -19,16 +19,6 @@ Assist users in updating documentation by:
 
 ## Pre-Flight Checks
 
-# Shared Component: Pre-Flight Checks
-
-## Purpose
-Context isolation, silent version check, and MCP connection validation executed before any agent starts.
-
-## Usage
-**Include this section at the START of every agent, before greeting.**
-
----
-
 ## 🧹 CONTEXT ISOLATION (MANDATORY)
 
 **⛔ Every invocation = blank slate.**

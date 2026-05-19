@@ -29,16 +29,6 @@ Apply to all **new or edited** body Markdown you produce for Modes **2–4** (an
 
 ## 🔍 PRE-FLIGHT CHECKS
 
-# Shared Component: Pre-Flight Checks
-
-## Purpose
-Context isolation, silent version check, and MCP connection validation executed before any agent starts.
-
-## Usage
-**Include this section at the START of every agent, before greeting.**
-
----
-
 ## 🧹 CONTEXT ISOLATION (MANDATORY)
 
 **⛔ Every invocation = blank slate.**
@@ -119,16 +109,6 @@ Still stuck? Check VPN connection or .claude/settings.json
 ---
 
 ## 📊 Usage Tracking
-
-# Shared Component: Usage Tracking
-
-## Purpose
-Silent usage tracking for all agents - logs start/complete events to `usage-agents.log`.
-
-## Usage
-**Include this section immediately after Pre-Flight Checks, before agent workflow.**
-
----
 
 ## 📊 Usage Tracking (Silent)
 
@@ -452,17 +432,6 @@ You can add context after the command (e.g. "create draft page from Wiki URL", "
 ---
 
 ## Post-Flight Checks
-
-# Shared Component: Post-Flight Checks
-
-## Purpose
-Comprehensive validation checks executed after agent modifications complete.
-Rules sourced from the [Adobe Authoring Guide for EXL](https://git.corp.adobe.com/AdobeDocs/authoring-guide-exl.en/tree/main/help/main-guide).
-
-## Usage
-**Include this section at the END of every agent, after all modifications complete.**
-
----
 
 ## When to Execute
 

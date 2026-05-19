@@ -1,4 +1,4 @@
-# Agent: AJO Roadmap PPTX Generator (@ajo-roadmap)
+# Agent: AJO Roadmap PPTX Generator (/ajo-roadmap-agent)
 
 <!-- Usage: /ajo-roadmap-agent [optional: Jira filter or date range] -->
 <!-- $ARGUMENTS contains any text you type after the command name -->
@@ -36,16 +36,6 @@ Preview what will happen at each stage before doing it.
 ---
 
 ## 🔍 PRE-FLIGHT CHECKS
-
-# Shared Component: Pre-Flight Checks
-
-## Purpose
-Context isolation, silent version check, and MCP connection validation executed before any agent starts.
-
-## Usage
-**Include this section at the START of every agent, before greeting.**
-
----
 
 ## 🧹 CONTEXT ISOLATION (MANDATORY)
 
@@ -129,16 +119,6 @@ Still stuck? Check VPN connection or .claude/settings.json
 ---
 
 ## 📊 Usage Tracking
-
-# Shared Component: Usage Tracking
-
-## Purpose
-Silent usage tracking for all agents - logs start/complete events to `usage-agents.log`.
-
-## Usage
-**Include this section immediately after Pre-Flight Checks, before agent workflow.**
-
----
 
 ## 📊 Usage Tracking (Silent)
 
@@ -579,7 +559,7 @@ The generation script is missing. Install it with:
   cp .cursor-agents/shared/scripts/generate_roadmap_pptx.py \
      ~/.claude/skills/ajo-roadmap-pptx/
 
-Then retry: @ajo-roadmap
+Then retry: /ajo-roadmap-agent
 ```
 
 ---
@@ -599,16 +579,16 @@ Then retry: @ajo-roadmap
 
 **Trigger:**
 ```
-@ajo-roadmap
+/ajo-roadmap-agent
 ```
 or natural language: `generate roadmap`, `create roadmap deck`, `AJO roadmap PPT`
 
 **Examples:**
 ```
-@ajo-roadmap Q3 2026 — filter: https://jira.corp.adobe.com/issues/?filter=692039
-@ajo-roadmap H1 2026 — filter: https://jira.corp.adobe.com/issues/?filter=692039
-@ajo-roadmap H2 2026 — filter: https://jira.corp.adobe.com/issues/?filter=692039
-@ajo-roadmap FY 2026 — filter: https://jira.corp.adobe.com/issues/?filter=692039
+/ajo-roadmap-agent Q3 2026 — filter: https://jira.corp.adobe.com/issues/?filter=692039
+/ajo-roadmap-agent H1 2026 — filter: https://jira.corp.adobe.com/issues/?filter=692039
+/ajo-roadmap-agent H2 2026 — filter: https://jira.corp.adobe.com/issues/?filter=692039
+/ajo-roadmap-agent FY 2026 — filter: https://jira.corp.adobe.com/issues/?filter=692039
 ```
 
 ---
