@@ -1,4 +1,4 @@
-# Agent: Upgrade Cursor Agents
+# Agent: Upgrade Claude Agents
 
 <!-- Usage: /upgrade-agents -->
 <!-- $ARGUMENTS is not used by this command -->

@@ -37,7 +37,90 @@ Preview what will happen at each stage before doing it.
 
 ## 🔍 PRE-FLIGHT CHECKS
 
-[Include shared/pre-flight-checks.md content here]
+# Shared Component: Pre-Flight Checks
+
+## Purpose
+Context isolation, silent version check, and MCP connection validation executed before any agent starts.
+
+## Usage
+**Include this section at the START of every agent, before greeting.**
+
+---
+
+## 🧹 CONTEXT ISOLATION (MANDATORY)
+
+**⛔ Every invocation = blank slate.**
+
+- **Zero memory.** This is a brand-new session. Forget any previous agent run, analysis, or result in this conversation.
+- **IDE metadata is NOT user input.** The IDE injects open files, recent files, and git status into every message. **Ignore it completely** — do not reference it, do not act on it, do not mention it.
+- **Show greeting. Ask questions. Wait for answers.** Follow the workflow step by step. Never skip a step, never pre-select files, never assume the user's intent.
+- **Exception:** Update Agent may accept a Feedback Agent handoff (see agents/update-agent.md). No other agent-to-agent data transfer is permitted.
+
+---
+
+## 🔍 PRE-FLIGHT CHECKS (Silent)
+
+**Execute before greeting - COMPLETELY INVISIBLE to user**
+
+### ✅ Check 1: Version Check (Silent & Non-Blocking)
+
+**CRITICAL: This check must be COMPLETELY INVISIBLE to the user - no terminal commands, no loading messages, nothing.**
+
+1. **Silently check if agents are up-to-date:**
+   - Check `.cursor-agents` git status internally (no visible commands)
+   - Compare local vs remote version
+   - If different: Store `AGENTS_OUTDATED=true` flag
+   - If check fails: Silently ignore and continue
+
+2. **User experience:**
+   - ✅ User sees ONLY the greeting as first message
+   - ❌ NO git commands visible
+   - ❌ NO "checking..." messages
+   - ❌ NO terminal output
+   
+3. **Show update notification ONLY:**
+   - If `AGENTS_OUTDATED=true` at the END after agent completes
+   - Otherwise: User never knows this check happened
+
+### ✅ Check 2: MCP Connection Test (MANDATORY - if agent uses MCP)
+
+**Test Wiki + Jira MCP servers silently**
+
+| Result | Action |
+|--------|--------|
+| ✅ Both pass | Proceed to Greeting |
+| ❌ Any fails | STOP + Show error message |
+
+**Error message format:**
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❌ CONNECTION ERROR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cannot reach MCP servers:
+- Wiki MCP: ✗ FAILED
+- Jira MCP: ✗ FAILED
+
+🔧 Quick Fix (30 seconds):
+1. Check your Claude Code MCP config: .claude/settings.json
+2. Verify both MCP servers are listed and enabled:
+   • Adobe Wiki Confluence
+   • Corp Jira
+3. Wait 5-10 seconds
+4. Re-run: /[agent-name]
+
+Still stuck? Check VPN connection or .claude/settings.json
+```
+
+**Note:** Skip MCP check if agent doesn't use MCP servers.
+
+---
+
+## Integration
+
+**After Pre-Flight Checks complete:**
+- Proceed directly to agent greeting
+- Show update notification at END if `AGENTS_OUTDATED=true`
 
 **MCP check:** Verify `user-Corp Jira` is reachable (silent test query). If unreachable, show the connection error block and STOP.
 
@@ -47,7 +130,77 @@ Preview what will happen at each stage before doing it.
 
 ## 📊 Usage Tracking
 
-[Include shared/usage-tracking.md content here]
+# Shared Component: Usage Tracking
+
+## Purpose
+Silent usage tracking for all agents - logs start/complete events to `usage-agents.log`.
+
+## Usage
+**Include this section immediately after Pre-Flight Checks, before agent workflow.**
+
+---
+
+## 📊 Usage Tracking (Silent)
+
+**CRITICAL: Execute silently immediately after Pre-Flight Check - completely invisible to user.**
+
+### Tracking Process
+
+**⛔ ANONYMIZED — Do NOT collect user names. Collect the repository name instead.**
+
+1. **At START of agent execution:**
+   - Get current timestamp (ISO 8601 format)
+   - Get repository name: derive from workspace folder name (e.g. `journey-optimizer.en`, `experience-platform.en`) (silent)
+   - Get agent version from agent file (replace `<version>` with actual version)
+   - Get agent name from agent file (replace `<agent-name>` with actual name)
+   - Create/append to `usage-agents.log` (at workspace root)
+   - Add one line in JSONL format:
+   ```json
+   {"timestamp":"<ISO8601>","agent":"<agent-name>","version":"<version>","repo":"<repo-name>","action":"start","status":"started"}
+   ```
+
+2. **At END of agent execution:**
+   - Get current timestamp
+   - Determine status: "success" or "error"
+   - Capture agent-specific metadata (files modified, mode, etc.)
+   - Append completion to `usage-agents.log`:
+   ```json
+   {"timestamp":"<ISO8601>","agent":"<agent-name>","version":"<version>","repo":"<repo-name>","action":"complete","status":"success",<agent-specific-metadata>}
+   ```
+   - Or if error occurred:
+   ```json
+   {"timestamp":"<ISO8601>","agent":"<agent-name>","version":"<version>","repo":"<repo-name>","action":"complete","status":"error","error":"<error-message>"}
+   ```
+
+3. **User experience:**
+   - ✅ User sees NOTHING about tracking
+   - ❌ NO "logging..." messages
+   - ❌ NO file operation messages
+   - ❌ NO terminal commands visible
+   - File operations are completely silent
+
+4. **File location:**
+   - Path: `usage-agents.log` (at workspace root)
+   - Format: JSONL (one JSON object per line)
+   - This file should be committed with your changes
+
+---
+
+## Agent-Specific Metadata
+
+Each agent should include relevant metadata in completion log:
+
+**Examples:**
+- `sanity-check-agent`: `"scan_type":"current_file|specific_file|folder","files_analyzed":<count>`
+- `create-agent`: `"mode":"release-notes|draft-page|landing-page","files_created":<count>`
+- `update-agent`: `"mode":"release-notes|single-repo|multi-repo","files_modified":<count>`
+
+---
+
+## Integration
+
+**After Usage Tracking start logged:**
+- Proceed directly to agent workflow greeting
 
 **Agent name:** `ajo-roadmap`
 **Version:** `1.0.0`
