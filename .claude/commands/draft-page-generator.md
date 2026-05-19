@@ -55,15 +55,14 @@ Cannot reach MCP servers:
 - Jira MCP: ✗ FAILED
 
 🔧 Quick Fix (30 seconds):
-1. Open Cursor Settings (Cmd+,)
-2. Go to: Tools & MCP
-3. Enable BOTH toggles (must be green):
+1. Check your Claude Code MCP config: .claude/settings.json
+2. Verify both MCP servers are listed and enabled:
    • Adobe Wiki Confluence
    • Corp Jira
-4. Wait 5-10 seconds
-5. Reload: @draft-page
+3. Wait 5-10 seconds
+4. Re-run: /draft-page-generator
 
-Still stuck? Check VPN connection or .cursor/mcp.json
+Still stuck? Check VPN connection or .claude/settings.json
 ```
 
 ---
