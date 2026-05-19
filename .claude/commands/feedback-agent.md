@@ -11,7 +11,6 @@ Turn multi-channel user feedback into actionable, standards-compliant documentat
 
 ---
 
-## 🔍 PRE-FLIGHT CHECKS
 
 ## 🧹 CONTEXT ISOLATION (MANDATORY)
 
@@ -20,7 +19,7 @@ Turn multi-channel user feedback into actionable, standards-compliant documentat
 - **Zero memory.** This is a brand-new session. Forget any previous agent run, analysis, or result in this conversation.
 - **IDE metadata is NOT user input.** The IDE injects open files, recent files, and git status into every message. **Ignore it completely** — do not reference it, do not act on it, do not mention it.
 - **Show greeting. Ask questions. Wait for answers.** Follow the workflow step by step. Never skip a step, never pre-select files, never assume the user's intent.
-- **Exception:** Update Agent may accept a Feedback Agent handoff (see agents/update-agent.md). No other agent-to-agent data transfer is permitted.
+- **Exception:** Update Agent may accept a Feedback Agent handoff (see .claude/commands/update-agent.md). No other agent-to-agent data transfer is permitted.
 
 ---
 
@@ -94,7 +93,6 @@ Still stuck? Check VPN connection or .claude/settings.json
 
 ---
 
-## 📊 Usage Tracking
 
 ## 📊 Usage Tracking (Silent)
 
@@ -577,7 +575,7 @@ Use this as-is or modify? (Reply "Use as-is" to continue, or paste your revised 
 Once the user confirms (or provides edits):
 - Set USER_INTENTION = confirmed or revised intention
 - Set SOURCES = confirmed or revised sources
-- **Follow the full Update Agent workflow from Step 2 (Type detection) through to the end**, as defined in `.cursor-agents/agents/update-agent.md`. Include all Golden Rules, mode selection, and post-flight checks.
+- **Follow the full Update Agent workflow from Step 2 (Type detection) through to the end**, as defined in `.cursor-agents/.claude/commands/update-agent.md`. Include all Golden Rules, mode selection, and post-flight checks.
 - You are now acting as the Update Agent; do not return to Feedback Agent behavior.
 
 **Note:** If the Feedback Agent run did not create Jira tasks, HANDOFF_SOURCES may only contain file paths or references from the analysis; that is fine.

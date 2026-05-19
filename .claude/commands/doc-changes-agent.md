@@ -1,4 +1,4 @@
-# Agent: Doc Changes (@doc-changes)
+# Agent: Doc Changes (/doc-changes-agent)
 
 <!-- Usage: /doc-changes-agent [optional: date range or branch name] -->
 <!-- $ARGUMENTS contains any text you type after the command name -->

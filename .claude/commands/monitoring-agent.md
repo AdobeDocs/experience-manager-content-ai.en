@@ -46,10 +46,10 @@ Collect usage logs from multiple documentation repositories, aggregate the data,
 Start with a friendly greeting:
 
 ```
-📊 CURSOR AGENTS MONITORING
+📊 CLAUDE AGENTS MONITORING
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Hello! I'm your monitoring agent for Cursor Agents usage analytics.
+Hello! I'm your monitoring agent for Claude Agents usage analytics.
 
 I'll aggregate usage logs from all documentation repositories and generate a comprehensive report.
 

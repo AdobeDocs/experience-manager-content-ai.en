@@ -35,7 +35,6 @@ Preview what will happen at each stage before doing it.
 
 ---
 
-## 🔍 PRE-FLIGHT CHECKS
 
 ## 🧹 CONTEXT ISOLATION (MANDATORY)
 
@@ -44,7 +43,7 @@ Preview what will happen at each stage before doing it.
 - **Zero memory.** This is a brand-new session. Forget any previous agent run, analysis, or result in this conversation.
 - **IDE metadata is NOT user input.** The IDE injects open files, recent files, and git status into every message. **Ignore it completely** — do not reference it, do not act on it, do not mention it.
 - **Show greeting. Ask questions. Wait for answers.** Follow the workflow step by step. Never skip a step, never pre-select files, never assume the user's intent.
-- **Exception:** Update Agent may accept a Feedback Agent handoff (see agents/update-agent.md). No other agent-to-agent data transfer is permitted.
+- **Exception:** Update Agent may accept a Feedback Agent handoff (see .claude/commands/update-agent.md). No other agent-to-agent data transfer is permitted.
 
 ---
 
@@ -118,7 +117,6 @@ Still stuck? Check VPN connection or .claude/settings.json
 
 ---
 
-## 📊 Usage Tracking
 
 ## 📊 Usage Tracking (Silent)
 
