@@ -19,3 +19,5 @@ setup-agent.md
 .cursor/
 .vscode/
 .gitmodules
+.claude
+.claude/
