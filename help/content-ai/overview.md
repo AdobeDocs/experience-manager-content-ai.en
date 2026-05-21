@@ -1,59 +1,108 @@
 ---
-title: AEM Content AI
-description: Learn about AEM Content AI, an AI-powered service that delivers semantic and generative search capabilities for Experience Manager as a Cloud Service.
+title: Get Started with AEM Content AI
+description: Learn how to configure AEM Content AI in Cloud Manager by setting up your first content source and triggering acquisition.
 feature: AEM Content AI
 feature-set: Cloud Manager
-topic: Overview
+topic: Configuration
 role: Developer, Admin
 level: Beginner
 solution: Experience Manager
-exl-id: 634692f1-0d69-481a-b262-f3bfdf46d5a6
 ---
 
-# AEM Content AI
+# Get Started with AEM Content AI
 
-**AEM Content AI** uses existing content in Adobe Experience Manager to improve semantic discovery and content reuse across workflows.
+This guide walks you through setting up AEM Content AI in Cloud Manager — from meeting prerequisites to creating a content source and confirming it is indexed and available.
 
-- Supports **semantic discovery**
-- Helps surface relevant content across **assets, content fragments, pages, and forms**
-- Supports AI-driven experiences for **discovery, recommendations, and workflow assistance**
+## Prerequisites {#prerequisites}
 
-## Key capabilities {#key-capabilities}
+Before you begin, ensure the following conditions are met:
 
-Content AI provides two complementary capabilities:
+- You have an active Cloud Manager program with at least one **single-region** AEM as a Cloud Service environment. Multi-region environments are not supported.
+- The environment product profile has been provisioned in **Adobe Admin Console**.
+- You hold the **Administrator** role in Admin Console for the program.
 
-| Capability | Description |
+## Step 1 — Open the Content AI Configuration tab {#open-tab}
+
+1. Sign in to [Cloud Manager](https://my.cloudmanager.adobe.com/) and select your program.
+
+   ![Cloud Manager home showing the program card](../assets/content-ai-onboarding-step-1.png)
+
+1. From the **Program Overview**, locate the **Environments** section and select the environment you want to configure.
+
+   ![Program Overview with a stage environment highlighted](../assets/content-ai-onboarding-step-2.png)
+
+1. On the environment detail page, select the **Content AI Configuration** tab.
+
+   ![Environment detail page with the Content AI Configuration tab highlighted](../assets/content-ai-onboarding-step-3.png)
+
+## Step 2 — Create a Content AI source {#create-source}
+
+A content source defines the website that Content AI crawls and indexes.
+
+1. On the **Content AI Configuration** tab, select **Create Source**.
+
+   ![Content AI Configuration tab showing the Create Source button](../assets/content-ai-onboarding-step-4.png)
+
+1. In the **Create/Add new Content AI Source** dialog, fill in the required fields:
+
+   | Field | Description |
+   | --- | --- |
+   | **Content AI Configuration Name** | A unique identifier for this source (for example, `my-site-index`). |
+   | **Website address** | The root URL of the website to crawl (for example, `https://www.example.com/`). |
+   | **Exclude URLs** | *(Optional)* URL patterns to skip during crawling. |
+   | **Refresh frequency** | How often Content AI re-crawls the source: Weekly, Daily, Daily 4×, 60 Min, or 15 Min. |
+
+   ![Create Content AI Source dialog with the name and website address fields highlighted](../assets/content-ai-onboarding-step-5.png)
+
+   ![Refresh frequency dropdown showing available options](../assets/content-ai-onboarding-step-5-1.png)
+
+1. Select **Create Source**.
+
+## Step 3 — Trigger acquisition {#trigger-acquisition}
+
+After the source is created, its status is **New**. Run an initial acquisition to start indexing.
+
+1. In the source list, select the **trigger** (▶) icon next to your source.
+
+   ![Content AI source list with the trigger icon highlighted](../assets/content-ai-onboarding-step-7.png)
+
+1. In the **Trigger Acquisition** dialog, review the source details and select **Trigger**.
+
+   ![Trigger Acquisition confirmation dialog](../assets/content-ai-onboarding-step-8.png)
+
+## Step 4 — Monitor indexing status {#monitor-status}
+
+After acquisition starts, the source status updates in real time.
+
+| Status | Meaning |
 | --- | --- |
-| **Semantic search** | Find content based on meaning rather than exact keywords. Queries return the most contextually relevant results from your indexed content using vector and hybrid search approaches. |
-| **Generative search** | Deliver AI-generated natural-language responses to user questions, with source links drawn directly from your indexed content. |
+| **New** | Source created; no acquisition has run yet. |
+| **Indexing** | Acquisition is in progress; content is being crawled and indexed. |
+| **Available** | Indexing is complete; the source is ready to serve search queries. |
 
-## How it works {#how-it-works}
+![Source list showing Indexing status](../assets/content-ai-onboarding-step-9.png)
 
-Content AI uses a configuration-driven pipeline to acquire, index, and serve your content.
+![Source list showing Available status](../assets/content-ai-onboarding-step-10.png)
 
-1. **Configure** — Define your data source, crawl schedule, and optional parsers for HTML and PDF content.
+Wait for the status to reach **Available** before testing the API.
 
-   Add a generative step with custom prompts to enable AI responses.
-2. **Discover** — Content AI crawls your website using a sitemap on a recurring cron schedule.
-3. **Index** — Acquired content is processed and stored in a vector index optimized for semantic retrieval.
-4. **Search** — Query the index through the REST API using semantic, fulltext, or hybrid approaches.
+## Modify or delete a source {#modify-source}
 
-   Use the generative search endpoint to receive natural-language answers.
+To update a source configuration after it has been created:
 
-## Availability {#availability}
+1. In the source list, select the **edit** (✎) icon next to the source.
 
->[!IMPORTANT]
->
->AEM Content AI is in the experimental phase. Multi-region AEM as a Cloud Service environments are not supported. Use a single-region environment.
+   ![Source list with the edit icon highlighted](../assets/content-ai-onboarding-step-11.png)
 
-Access requires an invitation to the Release Program. To request access:
+1. In the **Modify Content AI Source** dialog, update the website address, excluded URLs, or refresh frequency as needed.
 
-1. Join the [#aem-content-ai](https://adobe.enterprise.slack.com/archives/C081W9CFWM7) Slack channel.
-2. Post your Cloud Manager program name, environment ID, and a brief use case description.
-3. Tag @daurer and @andbogda for visibility.
+1. Select **Save** to apply the changes, or **Delete** to remove the source entirely.
 
-Access is typically granted within one to two business days.
+   ![Modify Content AI Source dialog](../assets/content-ai-onboarding-step-12.png)
+
+The source list updates to reflect your changes. If you deleted the source, it no longer appears in the list.
 
 ## Next steps {#next-steps}
 
-- [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) — Complete API documentation including endpoints, parameters, and request examples.
+- [AEM Content AI](overview-backup.md) — Learn about semantic search, generative search, and how the indexing pipeline works.
+- [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) — Query your indexed content using semantic, fulltext, or hybrid search endpoints.
