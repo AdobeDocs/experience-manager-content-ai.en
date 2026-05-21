@@ -17,7 +17,7 @@ This guide walks you through setting up AEM Content AI in Cloud Manager — from
 
 Before you begin, ensure the following conditions are met:
 
-- You have an active Cloud Manager program with at least one **single-region** AEM as a Cloud Service environment. Multi-region environments are not supported.
+- You have an active Cloud Manager program with at least one AEM as a Cloud Service environment.
 - The environment product profile has been provisioned in **Adobe Admin Console**.
 - You hold the **Administrator** role in Admin Console for the program.
 
