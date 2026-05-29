@@ -10,9 +10,9 @@ solution: Experience Manager
 keywords: AEM Content AI, content source, acquisition, Cloud Manager, Adobe Developer Console
 ---
 
-# Get Started with AEM Content AI
+# Set up and manage your Content AI Sources
 
-This guide walks you through setting up AEM Content AI in Cloud Manager — from meeting prerequisites to creating a content source and confirming it is indexed and available.
+This guide walks you through setting up Content AI Sources in Cloud Manager — from meeting prerequisites to creating a content source and confirming it is indexed and available.
 
 ## Prerequisites {#prerequisites}
 
@@ -20,7 +20,7 @@ Before you begin, ensure the following conditions are met:
 
 - You have an active Cloud Manager program with at least one AEM as a Cloud Service environment.
 - You hold the **[System Administrator](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** role in Admin Console for the program.
-- The environment product profile has been provisioned in **Adobe Admin Console**.
+- The environment product profile has been provisioned in **Adobe Admin Console**, see [Set Up an Adobe Developer Console Project](setup-adc-project.md).
 
 ## Step 1 — Open the Content AI Configuration tab {#open-tab}
 
