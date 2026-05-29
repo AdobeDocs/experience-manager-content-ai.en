@@ -111,5 +111,5 @@ AEM Content AI Services supports two authentication methods. Pick the one that m
 
 ## Next steps {#next-steps}
 
-- [Control your Content Sources](contentsources.md) — Configure a content source in Cloud Manager and trigger acquisition.
-- [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) — Use your access token or API key to query the indexed content.
+- [Control your Content Sources](contentsources.md) - Configure a content source in Cloud Manager and trigger acquisition.
+- [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - Use your access token or API key to query the indexed content.

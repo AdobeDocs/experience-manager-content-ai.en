@@ -15,9 +15,9 @@ Content lives in `help/content-ai/`. Images in `help/assets/`.
 
 ## Content Structure
 
-- `help/content-ai/TOC.md` — navigation manifest; every new `.md` must be registered here
-- `help/content-ai/*.md` — documentation pages
-- `help/assets/` — images; filename convention: lowercase, hyphens only
+- `help/content-ai/TOC.md` - navigation manifest; every new `.md` must be registered here
+- `help/content-ai/*.md` - documentation pages
+- `help/assets/` - images; filename convention: lowercase, hyphens only
   e.g. `content-ai-onboarding-step-1.png`
 
 ### TOC.md format
@@ -43,7 +43,7 @@ topic:              # e.g. Overview, Configuration
 role:               # e.g. Developer, Admin
 level:              # e.g. Beginner
 solution: Experience Manager
-exl-id:             # Adobe-assigned UUID; omit on new pages — the publishing pipeline assigns it
+exl-id:             # Adobe-assigned UUID; omit on new pages - the publishing pipeline assigns it
 ---
 ```
 
@@ -54,7 +54,7 @@ exl-id:             # Adobe-assigned UUID; omit on new pages — the publishing 
 - UI labels: `**[!UICONTROL Label]**`
 - Non-localized terms: `[!DNL term]`
 - Use `select` not `click` for UI interactions
-- Section anchors: `## Heading {#slug}` — used for deep links (`overview.md#prerequisites`)
+- Section anchors: `## Heading {#slug}` - used for deep links (`overview.md#prerequisites`)
 
 ## Validation
 
