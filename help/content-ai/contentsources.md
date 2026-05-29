@@ -1,5 +1,5 @@
 ---
-title: Get Started with AEM Content AI
+title: Set up and manage your Content AI Sources
 description: Learn how to configure AEM Content AI in Cloud Manager by setting up your first content source and triggering acquisition.
 feature: AEM Content AI
 feature-set: Cloud Manager
@@ -7,7 +7,7 @@ topic: Configuration
 role: Developer, Admin
 level: Beginner
 solution: Experience Manager
-keywords: AEM Content AI, content source, acquisition, Cloud Manager, Adobe Developer Console
+keywords: AEM Content AI, Content AI Sources, Acquisition, Cloud Manager, Adobe Developer Console
 ---
 
 # Set up and manage your Content AI Sources

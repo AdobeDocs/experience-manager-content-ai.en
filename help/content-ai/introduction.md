@@ -35,7 +35,7 @@ Publish channels now include AI surfaces. Content is delivered in shapes that hu
 
 AEM Content AI is structured as a four-layer stack — each layer building on the one below, from the trusted content at the foundation to the agentic experiences it powers at the top.
 
-![alt text](image.png)
+![Diagram of the four-layer AEM Content AI architecture stack: Content AI Sources at the foundation, Content AI Foundational Services, Agentic Content Orchestration, and Agentic Experience Orchestration at the top](../assets/content-ai-four-layer-architecture-stack.png)
 
 *Read the stack bottom up — from the trusted content at the foundation to the agentic experiences it powers at the top.*
 
@@ -67,4 +67,4 @@ Set up and manage your Content AI Sources to enable AI-based experiences, see [C
 
 ### Get to know Content AI APIs  {#apis}
  
-Explore the functional breadth of AEM Content AI — the APIs showcase the platform’s full potential. See [Content AI APIs (2026.04-experimental)](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/)
+Explore the functional breadth of AEM Content AI — the APIs showcase the platform's full potential. See [Content AI APIs (2026.04-experimental)](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/)
