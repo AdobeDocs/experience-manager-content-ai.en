@@ -40,16 +40,16 @@ AEM Content AI is structured as a four-layer stack - each layer building on the 
 *Read the stack bottom up - from the trusted content at the foundation to the agentic experiences it powers at the top.*
 
 1. Content AI Sources
-Content Sources are managed entities in AEM Content AI that connect to a trusted body of content. A Content Source can reference an AEM-governed content type such as assets, content fragments, pages, forms, metadata, and taxonomies, as well as external sources like published website content. Each Content Source is automatically vectorized and semantically enriched to power retrieval, grounding, and conversational AI experiences. Define Content Sources once and reuse them across Content AI APIs with automatic freshness and updates built in.
+Content Sources are managed entities in AEM Content AI that connect to a trusted body of content. A Content Source can reference an AEM-governed content type such as assets, content fragments, pages, forms, metadata, and taxonomies, as well as as non-AEM sources such as third-party websites, knowledge bases, or documentation portals. Each Content Source is automatically vectorized and semantically enriched to power retrieval, grounding, and conversational AI experiences. Define Content Sources once and reuse them across Content AI APIs with automatic freshness and updates built in.
 
 2. Content AI Foundational Services
 The APIs and services that enable semantic intelligence and generative AI in the context of brand content. Working on top of Content AI Sources, these services power retrieval, generation, brand-aware variation, and optimization - all grounded in the customer's approved content.
 
 3. Agentic Content Orchestration
-MCPs and agents that turn use-case-driven content requirements into coordinated action through natural language. This layer lets authors and other agents describe what they need in plain language, and have the right Foundational Services orchestrated to fulfill it.
+MCPs and agents that turn use-case-driven content requirements into coordinated action through natural language. This layer lets authors and other agents describe what they need in plain language, and have the right foundational services orchestrated to fulfill it.
 
 4. Agentic Experience Orchestration
-The innovative use cases that combine intelligent brand content with AI and GenAI to power new agentic experiences and user journeys. AEM solutions themselves are evolving in the same way - turning into agentic solutions that enable AI-powered content supply processes end-to-end.
+The innovative use cases that emerge when intelligent brand content meets AI at scale. AEM solutions themselves are built on these Foundational Services — and customers can use the same APIs directly to build their own agentic experiences over their own content. From AI-powered content supply chains to conversational user journeys, this layer is where governed content becomes a competitive advantage.
 
 These layers are connected by design: every AI service draws from the content foundation, and everything produced flows back into the same governed system - so author-side creation and publish-side delivery share one source of truth.
 
