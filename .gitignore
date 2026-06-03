@@ -21,3 +21,5 @@ setup-agent.md
 .gitmodules
 .claude
 .claude/
+CLAUDE.md
+docs/
