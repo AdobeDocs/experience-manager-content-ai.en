@@ -1,8 +1,6 @@
 ---
 title: AEM Content AI Overview
 description: Learn what AEM Content AI is, why it matters, and how to get started enabling and controlling it for your AEM as a Cloud Service environment.
-feature: AEM Content AI
-feature-set: Cloud Manager
 topic: Overview
 role: Developer, Admin
 level: Beginner
