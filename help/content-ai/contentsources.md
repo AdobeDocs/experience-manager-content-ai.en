@@ -20,7 +20,7 @@ Before you begin, ensure the following conditions are met:
 - You hold the **[System Administrator](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** role in Admin Console for the program.
 - The environment product profile has been provisioned in **Adobe Admin Console**, see [Set Up an Adobe Developer Console Project](setup-adc-project.md).
 
-## Step 1 - Open the Content AI Configuration tab {#open-tab}
+## Step 1 - Open the Content AI Configuration Tab {#open-tab}
 
 1. Sign in to [Cloud Manager](https://my.cloudmanager.adobe.com/) and select your program.
 
@@ -34,7 +34,7 @@ Before you begin, ensure the following conditions are met:
 
    ![Environment detail page with the Content AI Configuration tab highlighted](../assets/content-ai-onboarding-step-3.png)
 
-## Step 2 - Create a Content AI source {#create-source}
+## Step 2 - Create a Content AI Source {#create-source}
 
 A content source defines the website that Content AI crawls and indexes.
 
@@ -58,7 +58,7 @@ A content source defines the website that Content AI crawls and indexes.
 
 1. Select **[!UICONTROL Create Source]**.
 
-## Step 3 - Trigger acquisition {#trigger-acquisition}
+## Step 3 - Trigger Acquisition {#trigger-acquisition}
 
 After the source is created, its status is **New**. Run an initial acquisition to start indexing.
 
@@ -70,7 +70,7 @@ After the source is created, its status is **New**. Run an initial acquisition t
 
    ![Trigger Acquisition confirmation dialog](../assets/content-ai-onboarding-step-8.png)
 
-## Step 4 - Monitor indexing status {#monitor-status}
+## Step 4 - Monitor Indexing Status {#monitor-status}
 
 After acquisition starts, the source status updates in real time.
 
@@ -86,7 +86,7 @@ After acquisition starts, the source status updates in real time.
 
 Wait for the status to reach **Available** before searching the index or testing the API.
 
-## Step 5 - Search indexed content {#search-content}
+## Step 5 - Search Indexed Content {#search-content}
 
 Once the source status is **Available**, you can run search queries directly from Cloud Manager to verify that content has been indexed correctly.
 
@@ -98,7 +98,7 @@ Once the source status is **Available**, you can run search queries directly fro
 
    ![Search panel with a query, matching results with match scores, and a preview pane for the top result](../assets/content-ai-onboarding-step-14.png)
 
-## Modify or delete a source {#modify-source}
+## Modify or Delete a Source {#modify-source}
 
 To update a source configuration after it has been created:
 
@@ -118,7 +118,7 @@ To update a source configuration after it has been created:
 
 The source list updates to reflect your changes. If you deleted the source, it no longer appears in the list.
 
-## Next steps {#next-steps}
+## Next Steps {#next-steps}
 
 - [Set Up an Adobe Developer Console Project](setup-adc-project.md) - Create the ADC project and credentials you need to call the API.
 - [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - Query your indexed content using semantic, fulltext, or hybrid search endpoints.
