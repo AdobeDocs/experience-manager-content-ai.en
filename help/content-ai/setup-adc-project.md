@@ -1,8 +1,6 @@
 ---
 title: Set Up an Adobe Developer Console Project for AEM Content AI
 description: Learn how to set up an Adobe Developer Console project and authenticate API calls to AEM Content AI Services using Server-to-Server or API Key authentication.
-feature: AEM Content AI
-feature-set: Cloud Manager
 topic: Configuration
 role: Developer, Admin
 level: Beginner
@@ -10,7 +8,7 @@ solution: Experience Manager
 keywords: AEM Content AI, Adobe Developer Console, authentication, Server-to-Server, API Key, access token
 ---
 
-# Set up an Adobe Developer Console project {#configure-adc-project}
+# Set up an Adobe Developer Console Project {#configure-adc-project}
 
 To call the AEM Content AI Services API, you need credentials issued by an Adobe Developer Console (ADC) project. This page walks you through creating the project, selecting an authentication method, and generating the credential you include with every API request.
 
@@ -24,7 +22,7 @@ Before you begin, ensure the following:
 - You are added as a **Developer** on the AEM Content AI Services product profile in **Adobe Admin Console**. Without this role, the **[!UICONTROL AEM Content AI Services]** API card appears disabled and the **[!UICONTROL Server-to-Server]** authentication option is hidden.
 - You know the program and environment numbers for the product profile you want to select (for example, `AEM User - publish - Program 12345 - Environment 67890`).
 
-## Choose an authentication method {#choose-auth}
+## Choose an Authentication Method {#choose-auth}
 
 AEM Content AI Services supports two authentication methods. Pick the one that matches your integration:
 
@@ -33,7 +31,7 @@ AEM Content AI Services supports two authentication methods. Pick the one that m
 | [Server-to-Server](#s2s-auth) | Backend services that call the API without user interaction. Returns a short-lived access token. |
 | [API Key](#api-key-auth) | Client-side or browser-based integrations that call the API directly. Returns a long-lived key scoped to allowed domains. |
 
-## Server-to-Server authentication {#s2s-auth}
+## Server-to-Server Authentication {#s2s-auth}
 
 1. Select **[!UICONTROL APIs and services]**, then **[!UICONTROL APIs]**.
 
@@ -67,7 +65,7 @@ AEM Content AI Services supports two authentication methods. Pick the one that m
 
    ![Review screen detail showing the assigned product profiles for the credential](../assets/e2e-env-setup-34.png)
 
-### Generate an access token {#generate-token}
+### Generate an Access Token {#generate-token}
 
 1. In your ADC project, go to **[!UICONTROL Credentials]** and select **[!UICONTROL Generate access token]**.
 
@@ -83,7 +81,7 @@ AEM Content AI Services supports two authentication methods. Pick the one that m
    >
    >Store the token securely. It expires and must be regenerated periodically.
 
-## API Key authentication {#api-key-auth}
+## API Key Authentication {#api-key-auth}
 
 1. When adding the AEM Content AI Services API to your project, select **[!UICONTROL API Key]** in the **[!UICONTROL Select authentication type]** dialog.
 
@@ -109,7 +107,7 @@ AEM Content AI Services supports two authentication methods. Pick the one that m
 
    Your project is now ready. Use the key with every request to AEM Content AI Services.
 
-## Next steps {#next-steps}
+## Next Steps {#next-steps}
 
 - [Control your Content Sources](contentsources.md) - Configure a content source in Cloud Manager and trigger acquisition.
 - [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - Use your access token or API key to query the indexed content.
