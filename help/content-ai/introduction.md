@@ -10,7 +10,7 @@ keywords: AEM Content AI, overview, content source, semantic search, acquisition
 
 # AEM Content AI - An Introduction
 
-## Intelligent content, AI-ready by design {#ai-ready}
+## Intelligent Content, AI-ready by Design {#ai-ready}
 
 Customers are starting to meet brands through AI before they ever meet a website. Chat assistants, AI overviews, agents, conversational search, AI Concierges - all of them retrieve, summarize, and represent brand content on the brand's behalf. What they say is only as accurate, current, and on-brand as the content they can reach.
 That is the shift AEM Content AI is built for. It treats brand content as the ground truth that AI experiences run on - and gives AEM customers the tools to create that ground truth faster on the author side and serve it cleanly to consumer-facing AI-driven experiences on the publish side.
@@ -19,7 +19,7 @@ That is the shift AEM Content AI is built for. It treats brand content as the gr
 
 **On the publish side**, the same content is structured, governed, and addressable for AI to consume. Fragments, metadata, taxonomies, and approved sources are exposed in shapes that retrieval systems, agents, and conversational interfaces can use with confidence - so when AI speaks for the brand, it speaks the brand's truth.
 
-### What this means for AEM customers:
+### What it Means for AEM Customers {#what-it-means}
 
 Approved content is the brand's defense against hallucination. When AI is grounded in governed AEM content, answers stay accurate, current, and on-brand by default.
 Authoring keeps pace with AI-era demand. Teams generate copy and imagery for more audiences and moments inside the authoring experience - drawing from approved sources rather than starting blank.
@@ -29,7 +29,7 @@ Publish channels now include AI surfaces. Content is delivered in shapes that hu
 
 **The bigger point: existing trusted brand content is more valuable now than it has ever been. Every approved fragment, asset, and page already living in AEM becomes the ground truth that AI-driven experiences depend on - and AEM Content AI is what makes that library reusable, discoverable, and ready to power what comes next.**
 
-## AEM Content AI at a glance {#at-a-glance}
+## AEM Content AI at a Glance {#at-a-glance}
 
 AEM Content AI is structured as a four-layer stack - each layer building on the one below, from the trusted content at the foundation to the agentic experiences it powers at the top.
 
@@ -51,7 +51,7 @@ The innovative use cases that emerge when intelligent brand content meets AI at 
 
 These layers are connected by design: every AI service draws from the content foundation, and everything produced flows back into the same governed system - so author-side creation and publish-side delivery share one source of truth.
 
-## AEM Content AI in action {#action}
+## AEM Content AI in Action {#action}
 
 Getting to a working Content AI integration involves two tasks:
 
@@ -63,6 +63,6 @@ Getting to a working Content AI integration involves two tasks:
 
 Set up and manage your Content AI Sources to enable AI-based experiences, see [Control your Content Sources](contentsources.md).
 
-### Get to know Content AI APIs  {#apis}
+### Get to Know Content AI APIs  {#apis}
  
 Explore the functional breadth of AEM Content AI - the APIs showcase the platform's full potential. See [Content AI APIs (2026.04-experimental)](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/)
