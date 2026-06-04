@@ -65,4 +65,4 @@ Set up and manage your Content AI Sources to enable AI-based experiences, see [C
 
 ## Get to Know Content AI APIs  {#apis}
 
-Explore the functional breadth of AEM Content AI - the APIs showcase the platform's full potential. See [Content AI APIs (2026.04-experimental)](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).
+Explore the functional breadth of AEM Content AI - the APIs showcase the platform's full potential. See [Content AI APIs](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).
