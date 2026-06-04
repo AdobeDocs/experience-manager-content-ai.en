@@ -64,5 +64,5 @@ Getting to a working Content AI integration involves two tasks:
 Set up and manage your Content AI Sources to enable AI-based experiences, see [Control your Content Sources](contentsources.md).
 
 ## Get to Know Content AI APIs  {#apis}
- 
+
 Explore the functional breadth of AEM Content AI - the APIs showcase the platform's full potential. See [Content AI APIs (2026.04-experimental)](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).
