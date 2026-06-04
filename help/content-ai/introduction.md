@@ -55,11 +55,11 @@ These layers are connected by design: every AI service draws from the content fo
 
 Getting to a working Content AI integration involves two tasks:
 
-### Enable Content AI for your AEM Environment {#enable}
+### 1. Enable Content AI for your AEM Environment {#enable}
 
 **Prerequisite:** Before start using Content AI, you need API credentials scoped to your AEM as a Cloud Service environment. See [Set Up an Adobe Developer Console Project](setup-adc-project.md).
 
-### Control your Content AI Sources {#control}
+### 2. Control your Content AI Sources {#control}
 
 Set up and manage your Content AI Sources to enable AI-based experiences, see [Control your Content Sources](contentsources.md).
 
