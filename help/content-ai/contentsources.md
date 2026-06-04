@@ -16,9 +16,9 @@ This guide walks you through setting up Content AI Sources in Cloud Manager - fr
 
 Before you begin, ensure the following conditions are met:
 
-- You have an active Cloud Manager program with at least one AEM as a Cloud Service environment.
-- You hold the **[System Administrator](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** role in Admin Console for the program.
-- The environment product profile has been provisioned in **Adobe Admin Console**, see [Set Up an Adobe Developer Console Project](setup-adc-project.md).
+* You have an active Cloud Manager program with at least one AEM as a Cloud Service environment.
+* You hold the **[System Administrator](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** role in Admin Console for the program.
+* The environment product profile has been provisioned in **Adobe Admin Console**, see [Set Up an Adobe Developer Console Project](setup-adc-project.md).
 
 ## Step 1 - Open the Content AI Configuration Tab {#open-tab}
 
@@ -120,11 +120,11 @@ The source list updates to reflect your changes. If you deleted the source, it n
 
 ## Next Steps {#next-steps}
 
-- [Set Up an Adobe Developer Console Project](setup-adc-project.md) - Create the ADC project and credentials you need to call the API.
-- [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - Query your indexed content using semantic, fulltext, or hybrid search endpoints.
+* [Set Up an Adobe Developer Console Project](setup-adc-project.md) - Create the ADC project and credentials you need to call the API.
+* [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - Query your indexed content using semantic, fulltext, or hybrid search endpoints.
 
 ## Troubleshooting {#troubleshooting}
 
-- **Source stays in [!UICONTROL Indexing] for an extended period.** Retry the acquisition from the (…) menu. If the status does not advance after a second run, verify that the **[!UICONTROL Website address]** is publicly reachable and that the **[!UICONTROL Exclude URLs]** patterns do not filter out every page.
-- **Source moves back to [!UICONTROL New] after a run.** The crawler could not fetch any pages from the configured root URL. Confirm the URL responds with `200 OK` and that the site is not blocking automated requests.
-- **[!UICONTROL Search] returns no results for an [!UICONTROL Available] source.** Indexing succeeded, but no content matched the query. Try a broader query or check that the crawled URLs include the pages you expect.
+* **Source stays in [!UICONTROL Indexing] for an extended period.** Retry the acquisition from the (…) menu. If the status does not advance after a second run, verify that the **[!UICONTROL Website address]** is publicly reachable and that the **[!UICONTROL Exclude URLs]** patterns do not filter out every page.
+* **Source moves back to [!UICONTROL New] after a run.** The crawler could not fetch any pages from the configured root URL. Confirm the URL responds with `200 OK` and that the site is not blocking automated requests.
+* **[!UICONTROL Search] returns no results for an [!UICONTROL Available] source.** Indexing succeeded, but no content matched the query. Try a broader query or check that the crawled URLs include the pages you expect.
