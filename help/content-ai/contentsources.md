@@ -17,8 +17,43 @@ This guide walks you through setting up Content AI Sources in Cloud Manager - fr
 Before you begin, ensure the following conditions are met:
 
 * You have an active Cloud Manager program with at least one AEM as a Cloud Service environment.
-* You hold the **[System Administrator](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** role in Admin Console for the program.
-* The environment product profile has been provisioned in **Adobe Admin Console**, see [Set Up an Adobe Developer Console Project](setup-adc-project.md).
+* You hold the **[System Administrator](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** role in Admin Console for the program. This role lets you manage product profiles and assign users to the environment.
+* Your user is assigned to the **AEM Users** product profile for the target environment, which lets the user view content sources.
+* Your user is assigned to the **AEM Administrators** product profile for the target environment, which lets the user create and edit content sources. Access to Cloud Manager alone is not sufficient - see [Assign a user to an AEM product profile](#assign-product-profile) below.
+* The environment product profile has been provisioned in **Adobe Admin Console**.
+
+## Assign a user to an AEM product profile {#assign-product-profile}
+
+Use this procedure to grant a user access to [!DNL Adobe Experience Manager] as a Cloud Service for a specific environment. Assign the profile that matches the access the user needs:
+
+* **[!UICONTROL AEM Users]** - view content sources.
+* **[!UICONTROL AEM Administrators]** - create and edit content sources.
+
+>[!NOTE]
+>
+>Users must belong to an AEM product profile such as **[!UICONTROL AEM Users]** or **[!UICONTROL AEM Administrators]** to access AEM. Access to Cloud Manager alone is not sufficient.
+
+To assign these profiles, you must be a system administrator with the [!UICONTROL Business Owner] Cloud Manager product profile. Have the user's name and email address ready.
+
+1. In [Cloud Manager](https://my.cloudmanager.adobe.com/), navigate to your program and select **[!UICONTROL Manage Access]** for the target environment. A new tab opens [!DNL Adobe Admin Console] for that environment.
+1. Select the **[!UICONTROL AEM Users]** or **[!UICONTROL AEM Administrators]** product profile for the **publish** tier - for example, `AEM Administrators - publish - Program 12345 - Environment 67890`. Content AI indexes published content, so the profile must be assigned at the publish level, not author.
+1. Select **[!UICONTROL Add User]**.
+1. Enter the user's name and email address, then save the change. The user is added to the product profile.
+
+Repeat these steps for each environment where the user needs access, such as development, staging, or production.
+
+>[!CAUTION]
+>
+>Do not edit or delete the default product profiles named **[!UICONTROL AEM Administrators]** or **[!UICONTROL AEM Users]**. Renaming **[!UICONTROL AEM Administrators]** removes administrator rights from everyone assigned to it.
+
+### Verify the assignment {#verify-assignment}
+
+To verify that the assignment succeeded:
+
+1. In [!DNL Admin Console], reopen the product profile you assigned.
+1. Confirm that the user appears in the member list.
+
+If you are troubleshooting access or token issues, confirm that the user is added directly to the product profile and not only through a group.
 
 ## Step 1 - Open the Content AI Configuration Tab {#open-tab}
 
