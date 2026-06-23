@@ -17,7 +17,6 @@ This guide walks you through setting up Content AI Sources in Cloud Manager - fr
 Before you begin, ensure the following conditions are met:
 
 * You have an active Cloud Manager program with at least one AEM as a Cloud Service environment.
-* You hold the **[System Administrator](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** role in Admin Console for the program. This role lets you manage product profiles and assign users to the environment.
 * Your user is assigned to the **AEM Users** product profile for the target environment, which lets the user view content sources.
 * Your user is assigned to the **AEM Administrators** product profile for the target environment, which lets the user create and edit content sources. Access to Cloud Manager alone is not sufficient - see [Assign a user to an AEM product profile](#assign-product-profile) below.
 * The environment product profile has been provisioned in **Adobe Admin Console**.
