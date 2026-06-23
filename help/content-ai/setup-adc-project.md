@@ -21,6 +21,7 @@ Before you begin, ensure the following:
 * You have access to [Adobe Developer Console](https://developer.adobe.com/console/) for your organization.
 * You are added as a **Developer** on the AEM Content AI Services product profile in **Adobe Admin Console**. Without this role, the **[!UICONTROL AEM Content AI Services]** API card appears disabled and the **[!UICONTROL Server-to-Server]** authentication option is hidden.
 * You know the program and environment numbers for the product profile you want to select (for example, `AEM User - publish - Program 12345 - Environment 67890`).
+* You hold the **[System Administrator](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** role in Admin Console for the program. This role lets you manage product profiles and assign users to the environment.
 
 ## Choose an Authentication Method {#choose-auth}
 
