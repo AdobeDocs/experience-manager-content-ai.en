@@ -61,7 +61,7 @@ Getting to a working Content AI integration involves two tasks:
 
 ### 2. Control your Content AI Sources {#control}
 
-Set up and manage your Content AI Sources to enable AI-based experiences, see [Control your Content Sources](contentsources.md).
+Set up and manage your Content AI Sources to enable AI-based experiences, see [Control your Content Sources](contentsources.md) for more information.
 
 ## Get to Know Content AI APIs  {#apis}
 
