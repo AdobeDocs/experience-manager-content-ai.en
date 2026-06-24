@@ -90,11 +90,13 @@ A content source defines the website that Content AI crawls and indexes.
 
    ![Refresh frequency dropdown showing available options](../assets/content-ai-onboarding-step-5-1.png)
 
-1. Select **[!UICONTROL Create Source]**.
+1. Select **[!UICONTROL Create Source]**. Acquisition starts automatically, and the source moves to **Indexing**.
 
-## Step 3 - Trigger Acquisition {#trigger-acquisition}
+   ![Content Sources list showing the newly created source in Indexing status](../assets/content-ai-onboarding-step-6.png)
 
-After the source is created, its status is **New**. Run an initial acquisition to start indexing.
+## Step 3 - Re-run Acquisition {#trigger-acquisition}
+
+Acquisition runs automatically when you create a source and then on the schedule set by the **[!UICONTROL Refresh frequency]**. You can also trigger a run manually at any time - for example, to re-index immediately after publishing new content.
 
 1. In the source list, select the **more actions** (…) icon next to your source, then select **[!UICONTROL Trigger acquisition]**.
 
@@ -104,17 +106,13 @@ After the source is created, its status is **New**. Run an initial acquisition t
 
    ![Trigger Acquisition confirmation dialog](../assets/content-ai-onboarding-step-8.png)
 
-   The source status changes to **Indexing** shortly after the run starts.
-
-   ![Content Sources list showing the source in Indexing status after triggering acquisition](../assets/content-ai-onboarding-step-6.png)
-
 ## Step 4 - Monitor Indexing Status {#monitor-status}
 
 After acquisition starts, the source status updates in real time.
 
 | Status | Meaning |
 | --- | --- |
-| **New** | Source created; no acquisition has run yet. |
+| **New** | Source just created; the automatic acquisition has not started yet. This status is brief. |
 | **Indexing** | Acquisition is in progress; content is being crawled and indexed. |
 | **Available** | Indexing is complete; the source is ready to serve search queries. |
 
