@@ -104,6 +104,10 @@ After the source is created, its status is **New**. Run an initial acquisition t
 
    ![Trigger Acquisition confirmation dialog](../assets/content-ai-onboarding-step-8.png)
 
+   The source status changes to **Indexing** shortly after the run starts.
+
+   ![Content Sources list showing the source in Indexing status after triggering acquisition](../assets/content-ai-onboarding-step-6.png)
+
 ## Step 4 - Monitor Indexing Status {#monitor-status}
 
 After acquisition starts, the source status updates in real time.
@@ -124,15 +128,17 @@ Wait for the status to reach **Available** before searching the index or testing
 
 Once the source status is **Available**, you can run search queries directly from Cloud Manager to verify that content has been indexed correctly.
 
-1. In the source list, select **[!UICONTROL Search]** next to your source.
+1. In the source list, select the **search** (magnifying glass) icon next to your source.
 
-   ![Content Sources list with the Search button highlighted on an available source](../assets/content-ai-onboarding-step-13.png)
+   ![Content Sources list with the search icon highlighted on an available source](../assets/content-ai-onboarding-step-13.png)
 
 1. Enter a query in the search field. Results show a list of matching items with a match score and content type (for example, **PAGE** or **PDF**). Selecting a result opens a preview on the right.
 
    ![Search panel with a query, matching results with match scores, and a preview pane for the top result](../assets/content-ai-onboarding-step-14.png)
 
 ## Modify or Delete a Source {#modify-source}
+
+### Modify a source {#modify}
 
 To update a source configuration after it has been created:
 
@@ -142,15 +148,19 @@ To update a source configuration after it has been created:
 
 1. In the **[!UICONTROL Modify Content AI Source]** dialog, update the **[!UICONTROL Description]**, **[!UICONTROL Website address]**, **[!UICONTROL Exclude URLs]**, or **[!UICONTROL Refresh frequency]** as needed. The **[!UICONTROL Content AI Configuration Name]** is read-only and cannot be changed.
 
-1. Select **[!UICONTROL Save]** to apply the changes, or select **[!UICONTROL Delete]** in the lower-left of the dialog to remove the source entirely.
+   ![Modify Content AI Source dialog with the editable fields highlighted](../assets/content-ai-onboarding-step-12.png)
+
+1. Select **[!UICONTROL Save]** to apply the changes. The source list updates to reflect your changes.
+
+### Delete a source {#delete}
+
+1. In the source list, select the **more actions** (…) icon next to the source, then select **[!UICONTROL Delete]**.
 
    >[!WARNING]
    >
    >Deleting a source is permanent. All indexed content for that source is removed and can no longer serve search queries.
 
-   ![Modify Content AI Source dialog with the editable fields highlighted and a Delete button in the lower-left](../assets/content-ai-onboarding-step-12.png)
-
-The source list updates to reflect your changes. If you deleted the source, it no longer appears in the list.
+After deletion, the source no longer appears in the list.
 
 ## Next Steps {#next-steps}
 
