@@ -63,7 +63,7 @@ Use this path if you don't already have a search index for your site. Content AI
 
    | Status | Meaning |
    | --- | --- |
-   | **New** | Source just created; automatic acquisition hasn't started yet. Brief. |
+   | **New** | Source just created; automatic acquisition hasn't started yet. |
    | **Indexing** | Crawling and indexing in progress. |
    | **Available** | Indexing complete - ready to serve search queries. |
 
