@@ -48,7 +48,7 @@ Existing repository indexes appear automatically in the Content Sources list as 
 
 Use this path if you don't already have a search index for your site. Content AI's own crawler builds and refreshes one for you. This crawling process is also referred to as **acquisition** throughout Cloud Manager and this guide.
 
-1. Open the **[!UICONTROL Content AI Configuration]** tab, the same as in Step 1a.
+1. Open the **[!UICONTROL Content AI Sources]** tab, the same as in Step 1a.
 1. Select **[!UICONTROL Create Source]** and fill in the fields. Only users with the **[!UICONTROL AEM Administrators]** product profile can add new content sources.
 
    | Field | Description |
