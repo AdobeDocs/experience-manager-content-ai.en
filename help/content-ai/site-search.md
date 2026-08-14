@@ -30,7 +30,7 @@ Before you begin, ensure the following conditions are met:
 
 Existing repository indexes appear automatically in the Content Sources list as Source Type AEM - shown by what they index, such as Pages, Assets, or Content Fragments. They start out **Restricted** and locked, not yet searchable through Content AI.
 
-1. Sign in to [Cloud Manager](https://my.cloudmanager.adobe.com/), select your program, and open the **[!UICONTROL Content AI Configuration]** tab for the environment you want to configure.
+1. Sign in to [Cloud Manager](https://my.cloudmanager.adobe.com/), select your program, and open the **[!UICONTROL Content AI Sources]** tab for the environment you want to configure.
 1. Find the source you want to search against (for example, **Pages**) and select its lock icon. Only users with the **[!UICONTROL AEM Administrators]** product profile can do this - **[!UICONTROL AEM Users]** can view content sources, not change their searchability.
 1. Read the **Make source searchable?** dialog carefully. It warns that Apache Oak access control lists (ACLs) will not be enforced for this index once searchable - any authenticated user will be able to retrieve all of its content. Check **I understand that access controls (ACLs) are not enforced and all content in this source will be searchable**, then select **Make searchable**.
 1. Confirm the status changes to **Available**. A warning icon stays next to the source as a permanent reminder that ACLs are bypassed for it.
