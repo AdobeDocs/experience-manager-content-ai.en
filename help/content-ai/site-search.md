@@ -77,7 +77,7 @@ Use this path if you don't already have a search index for your site. Content AI
 
 There are two components that can put search on a page, built on different foundations:
 
-| | Quick Search (v3) with Semantic Search | Component 2 - AEM Content AI Search |
+| | Quick Search (v3) with Semantic Search | AEM Content AI Search |
 | --- | --- | --- |
 | Foundation | Existing Quick Search core component, upgraded to v3 | New, standalone component - calls the Content AI APIs directly |
 | Content source | Your existing site content, already in an index, enriched for semantic matching | A Content AI Source (Step 1a or 1b) |
@@ -97,9 +97,9 @@ If your site already uses the classic [!DNL AEM] Quick Search component, v3 adds
 >
 >If semantic search isn't working as expected after you enable the toggle, raise a support ticket.
 
-This path is a good fit if you want an incremental semantic-search upgrade without adopting a new component or Content Sources. It is not the right path if you want the generative-answer experience; use Component 2 for that.
+This path is a good fit if you want an incremental semantic-search upgrade without adopting a new component or Content Sources. It is not the right path if you want the generative-answer experience; use AEM Content AI Search for that.
 
-## Component 2 - AEM Content AI Search {#gensearch}
+## AEM Content AI Search {#gensearch}
 
 AEM Content AI Search is an [!DNL AEM] Core Component that lets visitors search a Content Source directly from a page, with both semantic search and generative search capabilities.
 
@@ -113,7 +113,7 @@ AEM Content AI Search is an [!DNL AEM] Core Component that lets visitors search 
 * At least one Content Source already created and in **Available** status.
 * The **AEM Content AI Client** OSGi configuration (`ContentAIClientImpl`) set up on both author and publish, with a valid API credential and a default Content Source.
 
-For the full setup guide - making the component available to authors, wiring up its client library, and configuring the dialog - see the [Core Components documentation](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction). 
+For the full setup guide - making the component available to authors, wiring up its client library, and configuring the dialog - see the [Core Components documentation](https://www.adobe.com/go/aem_cmp_library). 
 
 ## Congratulations! {#congratulations}
 
@@ -123,4 +123,4 @@ You have successfully set up your semantic and generative search capabilities.
 
 * [Set Up an Adobe Developer Console Project](setup-adc-project.md) - Create the ADC project and credentials you need to call the Content AI API directly.
 * [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - Query your indexed content using semantic, generative, or hybrid search endpoints.
-* [Core Components documentation](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction) - More on proxy components and template policies.
+* [Core Components documentation](https://www.adobe.com/go/aem_cmp_library) - More on proxy components and template policies.
