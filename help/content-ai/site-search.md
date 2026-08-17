@@ -103,6 +103,8 @@ This path is a good fit if you want an incremental semantic-search upgrade witho
 
 AEM Content AI Search is an [!DNL AEM] Core Component that lets visitors search a Content Source directly from a page, with both semantic search and generative search capabilities.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3497308)
+
 >[!NOTE]
 >
 >Generative search capabilities are purchased separately via an AI SKU. Contact your Adobe sales representative to enable it for your account.
@@ -118,6 +120,8 @@ For the full setup guide - making the component available to authors, wiring up 
 ## Congratulations! {#congratulations}
 
 You have successfully set up your semantic and generative search capabilities.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3497306)
 
 ## Next Steps {#next-steps}
 
