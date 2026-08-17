@@ -113,17 +113,14 @@ AEM Content AI Search is an [!DNL AEM] Core Component that lets visitors search 
 * At least one Content Source already created and in **Available** status.
 * The **AEM Content AI Client** OSGi configuration (`ContentAIClientImpl`) set up on both author and publish, with a valid API credential and a default Content Source.
 
-For the full setup guide - making the component available to authors, wiring up its client library, and configuring the dialog - see the [Core Components documentation](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction). *(Placeholder link until the dedicated AEM Content AI Search component page is published.)*
+For the full setup guide - making the component available to authors, wiring up its client library, and configuring the dialog - see the [Core Components documentation](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction). 
 
 ## Congratulations! {#congratulations}
 
 You have successfully set up your semantic and generative search capabilities.
-
-*(Video: Content AI in Action)*
 
 ## Next Steps {#next-steps}
 
 * [Set Up an Adobe Developer Console Project](setup-adc-project.md) - Create the ADC project and credentials you need to call the Content AI API directly.
 * [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - Query your indexed content using semantic, generative, or hybrid search endpoints.
 * [Core Components documentation](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction) - More on proxy components and template policies.
-* "Add the Content AI Search (GenSearch) Component to Your Project" - Apoorv's full reference doc for Component 2, not yet published to Experience League.
