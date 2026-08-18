@@ -10,7 +10,11 @@ keywords: AEM Content AI, AEM Content AI Search, GenSearch, Quick Search, Conten
 
 # Get Started with AEM Content AI Search
 
-This guide helps you transform your site's search with generative and AI-powered capabilities.
+Traditional site search matches the words a visitor types against the words in your content. That works well when visitors use the same terminology your content does - but it breaks down the moment they ask a question, express an intent, or simply phrase things differently. Search is one of the clearest signals of visitor intent on a site, so a failed match often means a failed journey: content goes undiscovered, engagement drops, and conversions are lost. Visitors increasingly expect search to understand what they mean, not just what they typed - and that same intent-aware foundation is what makes generative answers possible in the first place.
+
+AEM Content AI Search doesn't replace your site's search experience - it evolves it, from matching keywords, to understanding meaning and intent, to answering questions directly. Semantic Search adds intent-aware retrieval on top of your existing search experience, surfacing relevant content even when a query doesn't share the content's exact wording. Generative Search builds on that same retrieval foundation to produce contextual, generated answers grounded in your site's own content - a distinct step, not the same thing as semantic retrieval.
+
+For visitors, this means better relevance, natural-language support, fewer zero-result searches, and faster answers. For your business, it means better intent matching, stronger content discovery, and an AI-ready search foundation - without rebuilding your search experience from scratch. And for your team, it's an incremental upgrade: your existing search component can move from lexical, to semantic, to generative capabilities step by step, rather than requiring an entirely new implementation.
 
 Getting there comes down to two decisions: how your content gets into Content AI, and which component brings it to visitors. Connect your content, then add a search component to a page - and your site is ready to give visitors real answers, not just results.
 
