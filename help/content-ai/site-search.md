@@ -16,7 +16,7 @@ AEM Content AI Search doesn't replace your site's search experience - it evolves
 
 For visitors, this means better relevance, natural-language support, fewer zero-result searches, and faster answers. For your business, it means better intent matching, stronger content discovery, and an AI-ready search foundation - without rebuilding your search experience from scratch. And for your team, it's an incremental upgrade: your existing search component can move from lexical, to semantic, to generative capabilities step by step, rather than requiring an entirely new implementation.
 
-Getting there comes down to two decisions: how your content gets into Content AI, and which component brings it to visitors. Connect your content, then add a search component to a page - and your site is ready to give visitors real answers, not just results.
+Getting there comes down to two decisions: how your content gets into Content AI, and which component brings it to visitors. Connect your content, then add a search component to a page - and your site is ready to give visitors most relevant results and intent-based answers.
 
 ## Prerequisites {#prerequisites}
 
