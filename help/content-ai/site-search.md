@@ -10,25 +10,25 @@ keywords: AEM Content AI, AEM Content AI Search, GenSearch, Quick Search, Conten
 
 # Get Started with AEM Content AI Search
 
-Traditional site search matches the words a visitor types against the words in your content. That works well when visitors use the same terminology your content does - but it breaks down the moment they ask a question, express an intent, or simply phrase things differently. Search is one of the clearest signals of visitor intent on a site, so a failed match often means a failed journey: content goes undiscovered, engagement drops, and conversions are lost. Visitors increasingly expect search to understand what they mean, not just what they typed - and that same intent-aware foundation is what makes generative answers possible in the first place.
+Traditional site search matches the words a visitor types against the words in your content. That works well when visitors use the same terminology as your content. It fails when they ask a question, express an intent, or phrase things differently. Search is one of the clearest signals of visitor intent on a site, so a failed match often means a failed journey: content goes undiscovered, engagement drops, and conversions are lost. Visitors increasingly expect search to understand what they mean, not just what they typed. The same intent-aware foundation also makes generative answers possible.
 
 AEM Content AI Search doesn't replace your site's search experience - it evolves it, from matching keywords, to understanding meaning and intent, to answering questions directly. Semantic Search adds intent-aware retrieval on top of your existing search experience, surfacing relevant content even when a query doesn't share the content's exact wording. Generative Search builds on that same retrieval foundation to produce contextual, generated answers grounded in your site's own content - a distinct step, not the same thing as semantic retrieval.
 
-For visitors, this means better relevance, natural-language support, fewer zero-result searches, and faster answers. For your business, it means better intent matching, stronger content discovery, and an AI-ready search foundation - without rebuilding your search experience from scratch. And for your team, it's an incremental upgrade: your existing search component can move from lexical, to semantic, to generative capabilities step by step, rather than requiring an entirely new implementation.
+For visitors, this means better relevance, natural-language support, fewer zero-result searches, and faster answers. For your business, it means better intent matching, stronger content discovery, and an AI-ready search foundation - without rebuilding your search experience from scratch. And for your team, it's an incremental upgrade: your existing search component can move from lexical, to semantic, to generative capabilities step by step, rather than requiring a new implementation.
 
-Getting there comes down to two decisions: how your content gets into Content AI, and which component brings it to visitors. Connect your content, then add a search component to a page - and your site is ready to give visitors the most relevant results and intent-based answers.
+To get there, you make two decisions: how your content gets into Content AI, and which component brings it to visitors. To give visitors relevant results and intent-based answers, connect your content, then add a search component to a page.
 
 ## Prerequisites {#prerequisites}
 
 Before you begin, ensure the following conditions are met:
 
 * You have an active Cloud Manager program with at least one AEM as a Cloud Service environment.
-* Your user is assigned to the **[!UICONTROL AEM Users]** product profile (to view content sources) and/or **[!UICONTROL AEM Administrators]** (to create and edit them), assigned at the **publish** tier - Content AI indexes published content, not authored content. See [Assign a user to an AEM product profile](contentsources.md#assign-product-profile) for the full procedure.
+* Your user is assigned to the **[!UICONTROL AEM Users]** product profile (to view content sources) and/or **[!UICONTROL AEM Administrators]** (to create and edit them) on both the **author** and **publish** tiers. See [Assign a user to an AEM product profile](contentsources.md#assign-product-profile) for the full procedure.
 * The environment's product profile has been provisioned in **Adobe Admin Console**.
 
 >[!NOTE]
 >
->Access to Cloud Manager alone is not sufficient. A user also needs an AEM product profile assigned at the publish tier to view or manage content sources.
+>Access to Cloud Manager alone is not sufficient. A user also needs an AEM product profile assigned to both the author and publish tiers to view or manage content sources.
 
 ## Step 1a - Connect an Existing Index {#option-a}
 
@@ -36,9 +36,9 @@ Existing repository indexes appear automatically in the Content Sources list as 
 
 1. Sign in to [Cloud Manager](https://my.cloudmanager.adobe.com/), select your program, and open the **[!UICONTROL Content AI Configuration]** tab for the environment you want to configure.
 1. Find the source you want to search against (for example, **Pages**) and select its lock icon. Only users with the **[!UICONTROL AEM Administrators]** product profile can do this - **[!UICONTROL AEM Users]** can view content sources, not change their searchability.
-1. Read the **Make source searchable?** dialog carefully. It warns that Apache Oak access control lists (ACLs) will not be enforced for this index once searchable - any authenticated user will be able to retrieve all of its content. Check **I understand that access controls (ACLs) are not enforced and all content in this source will be searchable**, then select **Make searchable**.
+1. Read the **Make source searchable?** dialog carefully. It warns that Apache Oak access control lists (ACLs) are not enforced for this index after it becomes searchable. Any authenticated user can retrieve all of its content. Check **I understand that access controls (ACLs) are not enforced and all content in this source will be searchable**, then select **Make searchable**.
 1. Confirm the status changes to **Available**. A warning icon stays next to the source as a permanent reminder that ACLs are bypassed for it.
-1. Run a test search to verify results come back correctly.
+1. To verify the results, run a test search.
 
 >[!WARNING]
 >
@@ -46,7 +46,7 @@ Existing repository indexes appear automatically in the Content Sources list as 
 
 >[!NOTE]
 >
->This path is a good fit if you already have an index with your site's content - for instance, your page content. Use that index instead of setting up a separate crawling mechanism.
+>Use this path if you already have an index with your site's content, such as your page content. Use that index instead of setting up a separate crawling mechanism.
 
 ## Step 1b - Crawl a Website {#option-b}
 
@@ -71,11 +71,11 @@ Use this path if you don't already have a search index for your site. Content AI
    | **Indexing** | Crawling and indexing in progress. |
    | **Available** | Indexing complete - ready to serve search queries. |
 
-1. Select the **search** icon next to the source and run a test query to confirm your content was indexed correctly.
+1. To confirm that your content was indexed correctly, select the **search** icon next to the source and run a test query.
 
 >[!CAUTION]
 >
->A source stuck in **[!UICONTROL Indexing]**? Retry acquisition from the (…) menu first. If it still doesn't advance, confirm the website address is publicly reachable and that your **[!UICONTROL Exclude URLs]** patterns aren't filtering out every page.
+>If a source stays in **[!UICONTROL Indexing]**, retry acquisition from the (…) menu first. If it still doesn't advance, confirm the website address is publicly reachable and that your **[!UICONTROL Exclude URLs]** patterns aren't filtering out every page.
 
 ## Step 2 - Choose a Search Component {#choose-component}
 
@@ -93,15 +93,15 @@ There are two components that can put search on a page, built on different found
 If your site already uses the classic [!DNL AEM] Quick Search component, v3 adds an opt-in **AI Search** toggle visitors can switch on - no new component, proxy, or Content Source required.
 
 * Search still runs through the same JCR/QueryBuilder path as today - nothing changes in the result servlet or how results render.
-* When a visitor enables the toggle, the component prefixes the query with a special marker that routes it to semantic matching instead of plain keyword full-text.
-* There's no generative-answer summary on this path. It improves the match quality of the existing results list; it doesn't add a generative AI answer.
+* When a visitor enables the toggle, the component prefixes the query with a special marker that routes it to semantic matching instead of plain keyword full text search.
+* This path has no generative answer summary. It improves the match quality of the existing results list; it doesn't add a generative AI answer.
 * **Step 1 (Content AI onboarding) does not apply to this path.** There's no Content Source to create or connect - this component queries your existing page index directly.
 
 >[!NOTE]
 >
 >If semantic search isn't working as expected after you enable the toggle, raise a support ticket.
 
-This path is a good fit if you want an incremental semantic-search upgrade without adopting a new component or Content Sources. It is not the right path if you want the generative-answer experience; use AEM Content AI Search for that.
+Use this path if you want an incremental semantic search upgrade without adopting a new component or Content Sources. It is not the right path if you want the generative answer experience; use AEM Content AI Search for that.
 
 ## AEM Content AI Search {#gensearch}
 
