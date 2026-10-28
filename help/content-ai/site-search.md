@@ -141,5 +141,5 @@ You have successfully set up your semantic and generative search capabilities.
 ## Next Steps {#next-steps}
 
 * [Set Up an Adobe Developer Console Project](setup-adc-project.md) - Create the ADC project and credentials you need to call the Content AI API directly.
-* [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - Query your indexed content using semantic, generative, or hybrid search endpoints.
+* [Content AI API reference](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/) - Query your indexed content using semantic, generative, or hybrid search endpoints.
 * [Core Components documentation](https://www.adobe.com/go/aem_cmp_library) - More on proxy components and template policies.
